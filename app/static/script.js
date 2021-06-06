@@ -31,12 +31,12 @@ function fileChange(e) {
         canvas.height = h;
         canvas.getContext("2d").drawImage(image, 0, 0, w, h);
         if (file.type == "image/jpeg") {
-          let dataURL = canvas.toDataURL("image/jpeg", 0.8);
+          var dataURL = canvas.toDataURL("image/jpeg", 0.8);
           if (adjustImageFileSize(dataURL) > 1) {
             dataURL = canvas.toDataURL("image/jpeg", 0.5);
           }
         } else {
-          let dataURL = canvas.toDataURL("image/png", 0.8);
+          var dataURL = canvas.toDataURL("image/png", 0.8);
           if (adjustImageFileSize(dataURL) > 1) {
             dataURL = canvas.toDataURL("image/png", 0.5);
           }
